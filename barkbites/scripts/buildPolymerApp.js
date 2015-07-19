@@ -1,7 +1,7 @@
 module.exports = function(ctx) {
   var fs = ctx.requireCordovaModule('fs-extra');
   var childProcess = ctx.requireCordovaModule('child_process');
-  var polymerAppPath = '/Users/Max/Documents/phoneGap/polymerstarterkit';
+  var polymerAppPath = '/Users/Max/Documents/barkBitesRepo/polymerstarterkit';
   var destDir = ctx.opts.projectRoot + "/www";
 
   //first - build the Polymer project

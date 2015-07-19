@@ -1,0 +1,48 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+<dom-module id="bb-filter-list">
+
+  <!-- scoped CSS for this element -->
+  <style>
+    .filter-list {
+      height: 100%;
+      overflow: scroll;
+    }
+
+    .filter-item {
+      padding: 15px;
+      border-bottom: 1px solid lightgray;
+    }
+
+  </style>
+
+  <template>
+    <div class="filter-list">
+    	<template is="dom-repeat" items="{{filters}}">
+        <div class="filter-item">
+      		<paper-checkbox checked="{{item.selected}}">{{item.name}}</paper-checkbox>
+        </div>
+    	</template>
+    </div>
+  </template>
+
+  <script>
+    Polymer({
+      is: 'bb-filter-list',
+      properties: {
+      	filters: {
+      		type: Array,
+      		value: [
+            {'name': 'Restaurants', 'selected': true},
+            {'name': 'Breweries', 'selected': true},
+      			{'name': 'Dogs allowed inside', 'selected': true},
+      			{'name': 'Dogs only on Patio', 'selected': true},
+            {'name': 'Dogs only outside Patio', 'selected': false},
+            {'name': 'May be unleashed', 'selected': true},
+            {'name': 'Must be leashed', 'selected': true}
+      		]
+      	}
+      }
+    });
+  </script>
+
+</dom-module>

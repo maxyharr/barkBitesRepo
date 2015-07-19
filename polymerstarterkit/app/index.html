@@ -70,6 +70,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 
         <!-- Drawer Content -->
           <paper-menu class="list" attr-for-selected="data-route" selected="{{route}}" on-iron-select="onMenuSelect">
+            <bb-filter-list></bb-filter-list>
               <!-- Insert filter list here -->
 
               <!-- <a data-route="home" href="/">
@@ -88,7 +89,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
               </a> -->
           </paper-menu>
       </div>
-      <paper-header-panel main mode="waterfall">
+      <paper-header-panel main mode="seamed">
 
         <!-- Main Toolbar -->
         <paper-toolbar id="mainToolbar">
@@ -96,13 +97,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
           <span class="flex"></span>
 
           <!-- Toolbar icons -->
-          <paper-icon-button icon="refresh"></paper-icon-button>
           <paper-icon-button icon="search"></paper-icon-button>
+          <paper-icon-button src="images/pawprint.png"></paper-icon-button>
 
           <!-- Application name --> <!-- TODO: Insert app icon in middle of name -->
           <div class="middle paper-font-display2 app-name">
             Bark 
-            <img id="headerLogo" src="/images/logo.png"> 
+            <img id="headerLogo" src="images/logo.png"> 
             Bites
           </div> 
 
