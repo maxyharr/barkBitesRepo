@@ -14718,11 +14718,13 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   
   <style>
     .filter-list {
-      height: 100%;
+      height: 700px;
       overflow: scroll;
+      position: relative;
     }
 
     .filter-item {
+      width: 100%;
       padding: 15px;
       border-bottom: 1px solid lightgray;
     }
@@ -14732,9 +14734,7 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
   <template>
     <div class="filter-list">
     	<template is="dom-repeat" items="{{filters}}">
-        <div class="filter-item">
-      		<paper-checkbox checked="{{item.selected}}">{{item.name}}</paper-checkbox>
-        </div>
+      	<paper-checkbox checked="{{item.selected}}" class="filter-item">{{item.name}}</paper-checkbox>
     	</template>
     </div>
   </template>
